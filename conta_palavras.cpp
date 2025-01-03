@@ -9,7 +9,7 @@ std::vector<std::string> contaPalavras(std::string fileName){
     std::string text;
 
     while(input>>text){
-        std::cout << text << std::endl;
+        std::cout << text + " ";
     }
     input.close();
 

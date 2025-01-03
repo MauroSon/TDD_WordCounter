@@ -6,7 +6,7 @@
 #include "../TDD_WordCounter/catch.hpp"
 
 TEST_CASE("Testa Inicio","[single-file]"){
-    std::string testeInicio = {"Teste um dois três"};
+    std::string testeInicio = {"inputFile.txt"};
     std::vector<std::string> asw = {"dois:","1","Teste:","1","três:","1","um:","1"};
     REQUIRE(contaPalavras(testeInicio) == asw);
 }
