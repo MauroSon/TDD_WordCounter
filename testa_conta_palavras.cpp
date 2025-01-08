@@ -7,7 +7,7 @@
 
 TEST_CASE("Teste Alfabético", "[single-file]") {
     CustomDictionary expectedAswer;
-    std::string fileName = {"inputFile.txt"};
+    std::string fileName = {"inputFile1.txt"};
 
     expectedAswer.insert("a",1);
     expectedAswer.insert("b",1);
@@ -41,7 +41,7 @@ TEST_CASE("Teste Alfabético", "[single-file]") {
 
 TEST_CASE("Teste Quantidade(+1)", "[single-file]") {
     CustomDictionary expectedAnswer;
-    std::string fileName = {"inputFile.txt"};
+    std::string fileName = {"inputFile2.txt"};
 
     expectedAnswer.insert("abacate",1);
     expectedAnswer.insert("banana",1);
