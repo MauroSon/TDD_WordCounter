@@ -1,3 +1,5 @@
+// Copyright @2024 Mauro Silva
+
 #include <iostream>
 #include <string>
 #include <vector>
