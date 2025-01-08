@@ -185,3 +185,21 @@ TEST_CASE("Teste BreakRow", "[single-file]") {
 
     REQUIRE(contaPalavras(fileName) == expectedAnswer);
 }
+
+TEST_CASE("Teste Numeros", "[single-file]") {
+    CustomDictionary expectedAnswer;
+    std::string fileName = {"inputFile6.txt"};
+
+    expectedAnswer.insert("0",1);
+    expectedAnswer.insert("1",1);
+    expectedAnswer.insert("2",1);
+    expectedAnswer.insert("3",1);
+    expectedAnswer.insert("4",1);
+    expectedAnswer.insert("5",1);
+    expectedAnswer.insert("6",1);
+    expectedAnswer.insert("7",1);
+    expectedAnswer.insert("8",1);
+    expectedAnswer.insert("9",1);
+    
+    REQUIRE(contaPalavras(fileName) == expectedAnswer);
+}
