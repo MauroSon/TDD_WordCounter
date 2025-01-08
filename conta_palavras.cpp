@@ -2,10 +2,11 @@
 
 #include "../TDD_WordCounter/conta_palavras.hpp"
 
-int contaPalavras(std::string fileName) {
+CustomDictionary contaPalavras(std::string fileName) {
     std::vector<std::string> words;
     int qnt = 0;
     std::string temp;
+    CustomDictionary result;
 
     std::ifstream input(fileName);
     std::string text;
@@ -30,8 +31,8 @@ int contaPalavras(std::string fileName) {
     };
 
     for ( auto it = words.begin(); it != words.end(); ++it){
-        std::cout << *it << std::endl;
+        result.insert(*it,result.count(*it)+1);
     };
 
-    return 0;
+    return result;
 }

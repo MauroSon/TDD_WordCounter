@@ -52,4 +52,4 @@ private:
     std::vector<std::pair<std::string, int>> dictionary;
 };
 
-int contaPalavras(std::string fileName);
+CustomDictionary contaPalavras(std::string fileName);
