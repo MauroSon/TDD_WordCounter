@@ -146,3 +146,16 @@ TEST_CASE("Teste Alfabético(CAPITAL & Normal)", "[single-file]") {
 
     REQUIRE(contaPalavras(fileName) == expectedAswer);
 }
+
+TEST_CASE("Teste Acento", "[single-file]") {
+    CustomDictionary expectedAnswer;
+    std::string fileName = {"inputFile5.txt"};
+
+    expectedAnswer.insert("á",1);
+    expectedAnswer.insert("é",1);
+    expectedAnswer.insert("í",1);
+    expectedAnswer.insert("ó",1);
+    expectedAnswer.insert("ú",1);
+
+    REQUIRE(contaPalavras(fileName) == expectedAnswer);
+}
