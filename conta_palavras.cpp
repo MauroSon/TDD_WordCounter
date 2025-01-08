@@ -9,7 +9,7 @@ void contaPalavras(std::string fileName){
     while (input>>text){
         words.push_back(text);
     }
-
+    input.close();
     for (auto it = words.begin(); it  != words.end(); ++it){
         std::cout << *it << std::endl;
     }
