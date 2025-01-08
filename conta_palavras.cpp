@@ -1,6 +1,6 @@
 #include "../TDD_WordCounter/conta_palavras.hpp"
 
-void contaPalavras(std::string fileName){
+int contaPalavras(std::string fileName){
     std::vector<std::string> words;
 
     std::ifstream input(fileName);
@@ -13,4 +13,6 @@ void contaPalavras(std::string fileName){
     for (auto it = words.begin(); it  != words.end(); ++it){
         std::cout << *it << std::endl;
     }
+
+    return 0;
 }
