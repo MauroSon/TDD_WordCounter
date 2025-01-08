@@ -188,7 +188,7 @@ TEST_CASE("Teste BreakRow", "[single-file]") {
 
 TEST_CASE("Teste Numeros", "[single-file]") {
     CustomDictionary expectedAnswer;
-    std::string fileName = {"inputFile6.txt"};
+    std::string fileName = {"inputFile8.txt"};
 
     expectedAnswer.insert("0",1);
     expectedAnswer.insert("1",1);
@@ -200,6 +200,6 @@ TEST_CASE("Teste Numeros", "[single-file]") {
     expectedAnswer.insert("7",1);
     expectedAnswer.insert("8",1);
     expectedAnswer.insert("9",1);
-    
+
     REQUIRE(contaPalavras(fileName) == expectedAnswer);
 }
