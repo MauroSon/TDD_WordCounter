@@ -176,7 +176,7 @@ TEST_CASE("Teste Cedilha", "[single-file]") {
 
 TEST_CASE("Teste BreakRow", "[single-file]") {
     CustomDictionary expectedAnswer;
-    std::string fileName = {"inputFile6.txt"};
+    std::string fileName = {"inputFile7.txt"};
 
     expectedAnswer.insert("dois",1);
     expectedAnswer.insert("testando",1);
