@@ -6,6 +6,12 @@
 #include "../TDD_WordCounter/catch.hpp"
 
 TEST_CASE("Teste Inicio", "[single-file]") {
+    CustomDictionary expectedAswer;
     std::string testeInicio = {"inputFile.txt"};
-    REQUIRE(contaPalavras(testeInicio) == 0);
+
+    expectedAswer.insert("a",1);
+    expectedAswer.insert("b",1);
+    expectedAswer.insert("c",1);
+
+    REQUIRE(contaPalavras(testeInicio) == expectedAswer);
 }
