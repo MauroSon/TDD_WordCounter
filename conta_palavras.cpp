@@ -31,7 +31,13 @@ CustomDictionary contaPalavras(std::string fileName) {
     }
 
     for (auto it = words.begin(); it != words.end(); ++it) {
-        result.insert(*it, result.count(*it)+1);
+        int flag = 0;
+        for (auto cont = words.begin(); cont != words.end(); ++cont) {
+            if (*it == *cont) {
+                ++flag;
+            }
+        }
+        result.insert(*it, flag);
     }
 
     return result;

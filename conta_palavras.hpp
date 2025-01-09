@@ -66,16 +66,6 @@ class CustomDictionary {
             return true;
         }
 
-        int count(const std::string& key) {
-            for (const auto& pair : dictionary) {
-                if (pair.first == key) {
-                    return pair.second;
-                    // Return the value associated with the key (the count)
-                }
-            }
-            return 0;  // If the key is not found, return 0
-        }
-
  private:
         std::vector<std::pair<std::string, int>> dictionary;
 };
