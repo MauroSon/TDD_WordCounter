@@ -1,0 +1,223 @@
+\doxysection{testa\+\_\+conta\+\_\+palavras.\+cpp}
+\hypertarget{testa__conta__palavras_8cpp_source}{}\label{testa__conta__palavras_8cpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00001}00001\ \textcolor{comment}{//\ Copyright\ @2024\ Mauro\ Silva}}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{conta__palavras_8hpp}{../TDD\_WordCounter/conta\_palavras.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#define\ CATCH\_CONFIG\_MAIN}}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}../TDD\_WordCounter/catch.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00008}00008\ TEST\_CASE(\textcolor{stringliteral}{"{}Teste\ Alfabético"{}},\ \textcolor{stringliteral}{"{}[single-\/file]"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00009}00009\ \ \ \ \ \mbox{\hyperlink{classCustomDictionary}{CustomDictionary}}\ expectedAswer;}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00010}00010\ \ \ \ \ std::string\ fileName\ =\ \{\textcolor{stringliteral}{"{}inputFile1.txt"{}}\};}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00012}00012\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}a"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00013}00013\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}b"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00014}00014\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}c"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00015}00015\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}d"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00016}00016\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}e"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00017}00017\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}f"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00018}00018\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}g"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00019}00019\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}h"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00020}00020\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}i"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00021}00021\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}j"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00022}00022\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}k"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00023}00023\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}l"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00024}00024\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}m"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00025}00025\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}n"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00026}00026\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}o"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00027}00027\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}p"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00028}00028\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}q"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00029}00029\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}r"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00030}00030\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}s"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00031}00031\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}t"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00032}00032\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}u"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00033}00033\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}v"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00034}00034\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}w"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00035}00035\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}x"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00036}00036\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}y"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00037}00037\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}z"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00039}00039\ \ \ \ \ REQUIRE(contaPalavras(fileName)\ ==\ expectedAswer);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00042}00042\ TEST\_CASE(\textcolor{stringliteral}{"{}Teste\ Quantidade(+1)"{}},\ \textcolor{stringliteral}{"{}[single-\/file]"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{classCustomDictionary}{CustomDictionary}}\ expectedAnswer;}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00044}00044\ \ \ \ \ std::string\ fileName\ =\ \{\textcolor{stringliteral}{"{}inputFile2.txt"{}}\};}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00046}00046\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}abacate"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00047}00047\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}banana"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00048}00048\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}maçã"{}},\ 2);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00049}00049\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}melão"{}},\ 2);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00050}00050\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}morango"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00052}00052\ \ \ \ \ REQUIRE(contaPalavras(fileName)\ ==\ expectedAnswer);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00055}00055\ TEST\_CASE(\textcolor{stringliteral}{"{}Teste\ Alfabético(CAPITAL)"{}},\ \textcolor{stringliteral}{"{}[single-\/file]"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00056}00056\ \ \ \ \ \mbox{\hyperlink{classCustomDictionary}{CustomDictionary}}\ expectedAswer;}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00057}00057\ \ \ \ \ std::string\ fileName\ =\ \{\textcolor{stringliteral}{"{}inputFile3.txt"{}}\};}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00059}00059\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}A"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00060}00060\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}B"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00061}00061\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}C"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00062}00062\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}D"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00063}00063\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}E"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00064}00064\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}F"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00065}00065\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}G"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00066}00066\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}H"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00067}00067\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}I"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00068}00068\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}J"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00069}00069\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}K"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00070}00070\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}L"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00071}00071\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}M"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00072}00072\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}N"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00073}00073\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}O"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00074}00074\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}P"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00075}00075\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}Q"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00076}00076\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}R"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00077}00077\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}S"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00078}00078\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}T"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00079}00079\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}U"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00080}00080\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}V"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00081}00081\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}W"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00082}00082\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}X"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00083}00083\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}Y"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00084}00084\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}Z"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00086}00086\ \ \ \ \ REQUIRE(contaPalavras(fileName)\ ==\ expectedAswer);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00087}00087\ \}}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00089}00089\ TEST\_CASE(\textcolor{stringliteral}{"{}Teste\ Alfabético(CAPITAL\ \&\ Normal)"{}},\ \textcolor{stringliteral}{"{}[single-\/file]"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00090}00090\ \ \ \ \ \mbox{\hyperlink{classCustomDictionary}{CustomDictionary}}\ expectedAswer;}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00091}00091\ \ \ \ \ std::string\ fileName\ =\ \{\textcolor{stringliteral}{"{}inputFile4.txt"{}}\};}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00093}00093\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}A"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00094}00094\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}B"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00095}00095\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}C"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00096}00096\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}D"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00097}00097\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}E"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00098}00098\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}F"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00099}00099\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}G"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00100}00100\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}H"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00101}00101\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}I"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00102}00102\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}J"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00103}00103\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}K"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00104}00104\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}L"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00105}00105\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}M"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00106}00106\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}N"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00107}00107\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}O"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00108}00108\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}P"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00109}00109\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}Q"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00110}00110\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}R"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00111}00111\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}S"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00112}00112\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}T"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00113}00113\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}U"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00114}00114\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}V"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00115}00115\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}W"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00116}00116\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}X"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00117}00117\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}Y"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00118}00118\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}Z"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00119}00119\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}a"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00120}00120\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}b"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00121}00121\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}c"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00122}00122\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}d"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00123}00123\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}e"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00124}00124\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}f"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00125}00125\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}g"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00126}00126\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}h"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00127}00127\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}i"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00128}00128\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}j"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00129}00129\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}k"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00130}00130\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}l"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00131}00131\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}m"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00132}00132\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}n"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00133}00133\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}o"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00134}00134\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}p"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00135}00135\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}q"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00136}00136\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}r"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00137}00137\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}s"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00138}00138\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}t"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00139}00139\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}u"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00140}00140\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}v"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00141}00141\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}w"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00142}00142\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}x"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00143}00143\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}y"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00144}00144\ \ \ \ \ expectedAswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}z"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00147}00147\ \ \ \ \ REQUIRE(contaPalavras(fileName)\ ==\ expectedAswer);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00148}00148\ \}}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00150}00150\ TEST\_CASE(\textcolor{stringliteral}{"{}Teste\ Acento"{}},\ \textcolor{stringliteral}{"{}[single-\/file]"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00151}00151\ \ \ \ \ \mbox{\hyperlink{classCustomDictionary}{CustomDictionary}}\ expectedAnswer;}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00152}00152\ \ \ \ \ std::string\ fileName\ =\ \{\textcolor{stringliteral}{"{}inputFile5.txt"{}}\};}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00154}00154\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}á"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00155}00155\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}é"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00156}00156\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}í"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00157}00157\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}ó"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00158}00158\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}ú"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00160}00160\ \ \ \ \ REQUIRE(contaPalavras(fileName)\ ==\ expectedAnswer);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00161}00161\ \}}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00163}00163\ TEST\_CASE(\textcolor{stringliteral}{"{}Teste\ Cedilha"{}},\ \textcolor{stringliteral}{"{}[single-\/file]"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00164}00164\ \ \ \ \ \mbox{\hyperlink{classCustomDictionary}{CustomDictionary}}\ expectedAnswer;}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00165}00165\ \ \ \ \ std::string\ fileName\ =\ \{\textcolor{stringliteral}{"{}inputFile6.txt"{}}\};}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00167}00167\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}C"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00168}00168\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}c"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00169}00169\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}cabeca"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00170}00170\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}cabeça"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00171}00171\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}Ç"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00172}00172\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}ç"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00174}00174\ \ \ \ \ REQUIRE(contaPalavras(fileName)\ ==\ expectedAnswer);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00175}00175\ \}}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00177}00177\ TEST\_CASE(\textcolor{stringliteral}{"{}Teste\ BreakRow"{}},\ \textcolor{stringliteral}{"{}[single-\/file]"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00178}00178\ \ \ \ \ \mbox{\hyperlink{classCustomDictionary}{CustomDictionary}}\ expectedAnswer;}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00179}00179\ \ \ \ \ std::string\ fileName\ =\ \{\textcolor{stringliteral}{"{}inputFile7.txt"{}}\};}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00180}00180\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00181}00181\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}dois"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00182}00182\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}testando"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00183}00183\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}três"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00184}00184\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}um"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00186}00186\ \ \ \ \ REQUIRE(contaPalavras(fileName)\ ==\ expectedAnswer);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00187}00187\ \}}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00189}00189\ TEST\_CASE(\textcolor{stringliteral}{"{}Teste\ Numeros"{}},\ \textcolor{stringliteral}{"{}[single-\/file]"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00190}00190\ \ \ \ \ \mbox{\hyperlink{classCustomDictionary}{CustomDictionary}}\ expectedAnswer;}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00191}00191\ \ \ \ \ std::string\ fileName\ =\ \{\textcolor{stringliteral}{"{}inputFile8.txt"{}}\};}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00193}00193\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}0"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00194}00194\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}1"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00195}00195\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}2"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00196}00196\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}3"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00197}00197\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}4"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00198}00198\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}5"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00199}00199\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}6"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00200}00200\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}7"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00201}00201\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}8"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00202}00202\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}9"{}},\ 1);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00203}00203\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00204}00204\ \ \ \ \ REQUIRE(contaPalavras(fileName)\ ==\ expectedAnswer);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00205}00205\ \}}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00207}00207\ TEST\_CASE(\textcolor{stringliteral}{"{}Teste\ Quantidade(n+)"{}},\ \textcolor{stringliteral}{"{}[single-\/file]"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00208}00208\ \ \ \ \ \mbox{\hyperlink{classCustomDictionary}{CustomDictionary}}\ expectedAnswer;}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00209}00209\ \ \ \ \ std::string\ fileName\ =\ \{\textcolor{stringliteral}{"{}inputFile9.txt"{}}\};}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00211}00211\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}abacate"{}},\ 3);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00212}00212\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}banana"{}},\ 5);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00213}00213\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}maçã"{}},\ 4);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00214}00214\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}melão"{}},\ 3);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00215}00215\ \ \ \ \ expectedAnswer.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{stringliteral}{"{}morango"{}},\ 6);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00216}00216\ }
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00217}00217\ \ \ \ \ REQUIRE(contaPalavras(fileName)\ ==\ expectedAnswer);}
+\DoxyCodeLine{\Hypertarget{testa__conta__palavras_8cpp_source_l00218}00218\ \}}
+
+\end{DoxyCode}

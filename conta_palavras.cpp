@@ -16,7 +16,6 @@ CustomDictionary contaPalavras(std::string fileName) {
     }
     input.close();
     for (auto it = words.begin(); it  != words.end(); ++it) {
-       // std::cout << *it << std::endl;
        ++qnt;
     }
 

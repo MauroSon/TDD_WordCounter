@@ -1,0 +1,245 @@
+\doxysection{cpplint.\+\_\+\+Block\+Info Class Reference}
+\hypertarget{classcpplint_1_1__BlockInfo}{}\label{classcpplint_1_1__BlockInfo}\index{cpplint.\_BlockInfo@{cpplint.\_BlockInfo}}
+Inheritance diagram for cpplint.\+\_\+\+Block\+Info\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcpplint_1_1__BlockInfo}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcpplint_1_1__BlockInfo_a0ffada51223f386e56d7983887ee1e36}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, linenum, seen\+\_\+open\+\_\+brace)
+\item 
+\mbox{\hyperlink{classcpplint_1_1__BlockInfo_ab647f3776f8ea0cddce48df16866c22b}{Check\+Begin}} (self, filename, clean\+\_\+lines, linenum, error)
+\item 
+\mbox{\hyperlink{classcpplint_1_1__BlockInfo_a8aa346eb67ebeca1794b4b0d49ce1710}{Check\+End}} (self, filename, clean\+\_\+lines, linenum, error)
+\item 
+\mbox{\hyperlink{classcpplint_1_1__BlockInfo_a91769e579c79f86c6cbf586398a55fc9}{Is\+Block\+Info}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcpplint_1_1__BlockInfo_a81d316f03e42aebbfe0636f905c4c291}{starting\+\_\+linenum}} = linenum
+\item 
+\mbox{\hyperlink{classcpplint_1_1__BlockInfo_aa974539217437751383ad20896c974d7}{seen\+\_\+open\+\_\+brace}} = seen\+\_\+open\+\_\+brace
+\item 
+int \mbox{\hyperlink{classcpplint_1_1__BlockInfo_abfb5445818ddb493add259f274261c52}{open\+\_\+parentheses}} = 0
+\item 
+\mbox{\hyperlink{classcpplint_1_1__BlockInfo_aad762ef7088f2f556a75c9a80006f4db}{inline\+\_\+asm}} = \+\_\+\+NO\+\_\+\+ASM
+\item 
+bool \mbox{\hyperlink{classcpplint_1_1__BlockInfo_add6fc4dcb79b94e438e9619a9a3d7428}{check\+\_\+namespace\+\_\+indentation}} = False
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Stores information about a generic block of code.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{cpplint_8py_source_l02205}{2205}} of file \mbox{\hyperlink{cpplint_8py_source}{cpplint.\+py}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcpplint_1_1__BlockInfo_a0ffada51223f386e56d7983887ee1e36}\index{cpplint.\_BlockInfo@{cpplint.\_BlockInfo}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!cpplint.\_BlockInfo@{cpplint.\_BlockInfo}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classcpplint_1_1__BlockInfo_a0ffada51223f386e56d7983887ee1e36} 
+cpplint.\+\_\+\+Block\+Info.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{linenum}{, }\item[{}]{seen\+\_\+open\+\_\+brace}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{cpplint_8py_source_l02208}{2208}} of file \mbox{\hyperlink{cpplint_8py_source}{cpplint.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02208\ \ \ \textcolor{keyword}{def\ }\_\_init\_\_(self,\ linenum,\ seen\_open\_brace):}
+\DoxyCodeLine{02209\ \ \ \ \ self.starting\_linenum\ =\ linenum}
+\DoxyCodeLine{02210\ \ \ \ \ self.seen\_open\_brace\ =\ seen\_open\_brace}
+\DoxyCodeLine{02211\ \ \ \ \ self.open\_parentheses\ =\ 0}
+\DoxyCodeLine{02212\ \ \ \ \ self.inline\_asm\ =\ \_NO\_ASM}
+\DoxyCodeLine{02213\ \ \ \ \ self.check\_namespace\_indentation\ =\ \textcolor{keyword}{False}}
+\DoxyCodeLine{02214\ }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcpplint_1_1__BlockInfo_ab647f3776f8ea0cddce48df16866c22b}\index{cpplint.\_BlockInfo@{cpplint.\_BlockInfo}!CheckBegin@{CheckBegin}}
+\index{CheckBegin@{CheckBegin}!cpplint.\_BlockInfo@{cpplint.\_BlockInfo}}
+\doxysubsubsection{\texorpdfstring{CheckBegin()}{CheckBegin()}}
+{\footnotesize\ttfamily \label{classcpplint_1_1__BlockInfo_ab647f3776f8ea0cddce48df16866c22b} 
+cpplint.\+\_\+\+Block\+Info.\+Check\+Begin (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{filename}{, }\item[{}]{clean\+\_\+lines}{, }\item[{}]{linenum}{, }\item[{}]{error}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Run checks that applies to text up to the opening brace.
+
+This is mostly for checking the text after the class identifier
+and the "{", usually where the base class is specified.  For other
+blocks, there isn't much to check, so we always pass.
+
+Args:
+  filename: The name of the current file.
+  clean_lines: A CleansedLines instance containing the file.
+  linenum: The number of the line to check.
+  error: The function to call with any errors found.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classcpplint_1_1__ClassInfo_ac6f8b3209ba2297ce81d63116ddb6c31}{cpplint.\+\_\+\+Class\+Info}}.
+
+
+
+Definition at line \mbox{\hyperlink{cpplint_8py_source_l02215}{2215}} of file \mbox{\hyperlink{cpplint_8py_source}{cpplint.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02215\ \ \ \textcolor{keyword}{def\ }CheckBegin(self,\ filename,\ clean\_lines,\ linenum,\ error):}
+\DoxyCodeLine{02216\ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}Run\ checks\ that\ applies\ to\ text\ up\ to\ the\ opening\ brace.}}
+\DoxyCodeLine{02217\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{02218\ \textcolor{stringliteral}{\ \ \ \ This\ is\ mostly\ for\ checking\ the\ text\ after\ the\ class\ identifier}}
+\DoxyCodeLine{02219\ \textcolor{stringliteral}{\ \ \ \ and\ the\ "{}\{"{},\ usually\ where\ the\ base\ class\ is\ specified.\ \ For\ other}}
+\DoxyCodeLine{02220\ \textcolor{stringliteral}{\ \ \ \ blocks,\ there\ isn't\ much\ to\ check,\ so\ we\ always\ pass.}}
+\DoxyCodeLine{02221\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{02222\ \textcolor{stringliteral}{\ \ \ \ Args:}}
+\DoxyCodeLine{02223\ \textcolor{stringliteral}{\ \ \ \ \ \ filename:\ The\ name\ of\ the\ current\ file.}}
+\DoxyCodeLine{02224\ \textcolor{stringliteral}{\ \ \ \ \ \ clean\_lines:\ A\ CleansedLines\ instance\ containing\ the\ file.}}
+\DoxyCodeLine{02225\ \textcolor{stringliteral}{\ \ \ \ \ \ linenum:\ The\ number\ of\ the\ line\ to\ check.}}
+\DoxyCodeLine{02226\ \textcolor{stringliteral}{\ \ \ \ \ \ error:\ The\ function\ to\ call\ with\ any\ errors\ found.}}
+\DoxyCodeLine{02227\ \textcolor{stringliteral}{\ \ \ \ "{}"{}"{}}}
+\DoxyCodeLine{02228\ \ \ \ \ \textcolor{keywordflow}{pass}}
+\DoxyCodeLine{02229\ }
+
+\end{DoxyCode}
+\Hypertarget{classcpplint_1_1__BlockInfo_a8aa346eb67ebeca1794b4b0d49ce1710}\index{cpplint.\_BlockInfo@{cpplint.\_BlockInfo}!CheckEnd@{CheckEnd}}
+\index{CheckEnd@{CheckEnd}!cpplint.\_BlockInfo@{cpplint.\_BlockInfo}}
+\doxysubsubsection{\texorpdfstring{CheckEnd()}{CheckEnd()}}
+{\footnotesize\ttfamily \label{classcpplint_1_1__BlockInfo_a8aa346eb67ebeca1794b4b0d49ce1710} 
+cpplint.\+\_\+\+Block\+Info.\+Check\+End (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{filename}{, }\item[{}]{clean\+\_\+lines}{, }\item[{}]{linenum}{, }\item[{}]{error}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Run checks that applies to text after the closing brace.
+
+This is mostly used for checking end of namespace comments.
+
+Args:
+  filename: The name of the current file.
+  clean_lines: A CleansedLines instance containing the file.
+  linenum: The number of the line to check.
+  error: The function to call with any errors found.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classcpplint_1_1__ClassInfo_af46c33e69478b0b71a84cde0cbf70984}{cpplint.\+\_\+\+Class\+Info}}, and \mbox{\hyperlink{classcpplint_1_1__NamespaceInfo_acb5ed6c0be2970b1045eacc18f08e797}{cpplint.\+\_\+\+Namespace\+Info}}.
+
+
+
+Definition at line \mbox{\hyperlink{cpplint_8py_source_l02230}{2230}} of file \mbox{\hyperlink{cpplint_8py_source}{cpplint.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02230\ \ \ \textcolor{keyword}{def\ }CheckEnd(self,\ filename,\ clean\_lines,\ linenum,\ error):}
+\DoxyCodeLine{02231\ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}Run\ checks\ that\ applies\ to\ text\ after\ the\ closing\ brace.}}
+\DoxyCodeLine{02232\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{02233\ \textcolor{stringliteral}{\ \ \ \ This\ is\ mostly\ used\ for\ checking\ end\ of\ namespace\ comments.}}
+\DoxyCodeLine{02234\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{02235\ \textcolor{stringliteral}{\ \ \ \ Args:}}
+\DoxyCodeLine{02236\ \textcolor{stringliteral}{\ \ \ \ \ \ filename:\ The\ name\ of\ the\ current\ file.}}
+\DoxyCodeLine{02237\ \textcolor{stringliteral}{\ \ \ \ \ \ clean\_lines:\ A\ CleansedLines\ instance\ containing\ the\ file.}}
+\DoxyCodeLine{02238\ \textcolor{stringliteral}{\ \ \ \ \ \ linenum:\ The\ number\ of\ the\ line\ to\ check.}}
+\DoxyCodeLine{02239\ \textcolor{stringliteral}{\ \ \ \ \ \ error:\ The\ function\ to\ call\ with\ any\ errors\ found.}}
+\DoxyCodeLine{02240\ \textcolor{stringliteral}{\ \ \ \ "{}"{}"{}}}
+\DoxyCodeLine{02241\ \ \ \ \ \textcolor{keywordflow}{pass}}
+\DoxyCodeLine{02242\ }
+
+\end{DoxyCode}
+\Hypertarget{classcpplint_1_1__BlockInfo_a91769e579c79f86c6cbf586398a55fc9}\index{cpplint.\_BlockInfo@{cpplint.\_BlockInfo}!IsBlockInfo@{IsBlockInfo}}
+\index{IsBlockInfo@{IsBlockInfo}!cpplint.\_BlockInfo@{cpplint.\_BlockInfo}}
+\doxysubsubsection{\texorpdfstring{IsBlockInfo()}{IsBlockInfo()}}
+{\footnotesize\ttfamily \label{classcpplint_1_1__BlockInfo_a91769e579c79f86c6cbf586398a55fc9} 
+cpplint.\+\_\+\+Block\+Info.\+Is\+Block\+Info (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns true if this block is a _BlockInfo.
+
+This is convenient for verifying that an object is an instance of
+a _BlockInfo, but not an instance of any of the derived classes.
+
+Returns:
+  True for this class, False for derived classes.
+\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{cpplint_8py_source_l02243}{2243}} of file \mbox{\hyperlink{cpplint_8py_source}{cpplint.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02243\ \ \ \textcolor{keyword}{def\ }IsBlockInfo(self):}
+\DoxyCodeLine{02244\ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}Returns\ true\ if\ this\ block\ is\ a\ \_BlockInfo.}}
+\DoxyCodeLine{02245\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{02246\ \textcolor{stringliteral}{\ \ \ \ This\ is\ convenient\ for\ verifying\ that\ an\ object\ is\ an\ instance\ of}}
+\DoxyCodeLine{02247\ \textcolor{stringliteral}{\ \ \ \ a\ \_BlockInfo,\ but\ not\ an\ instance\ of\ any\ of\ the\ derived\ classes.}}
+\DoxyCodeLine{02248\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{02249\ \textcolor{stringliteral}{\ \ \ \ Returns:}}
+\DoxyCodeLine{02250\ \textcolor{stringliteral}{\ \ \ \ \ \ True\ for\ this\ class,\ False\ for\ derived\ classes.}}
+\DoxyCodeLine{02251\ \textcolor{stringliteral}{\ \ \ \ "{}"{}"{}}}
+\DoxyCodeLine{02252\ \ \ \ \ \textcolor{keywordflow}{return}\ self.\_\_class\_\_\ ==\ \_BlockInfo}
+\DoxyCodeLine{02253\ }
+\DoxyCodeLine{02254\ }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcpplint_1_1__BlockInfo_add6fc4dcb79b94e438e9619a9a3d7428}\index{cpplint.\_BlockInfo@{cpplint.\_BlockInfo}!check\_namespace\_indentation@{check\_namespace\_indentation}}
+\index{check\_namespace\_indentation@{check\_namespace\_indentation}!cpplint.\_BlockInfo@{cpplint.\_BlockInfo}}
+\doxysubsubsection{\texorpdfstring{check\_namespace\_indentation}{check\_namespace\_indentation}}
+{\footnotesize\ttfamily \label{classcpplint_1_1__BlockInfo_add6fc4dcb79b94e438e9619a9a3d7428} 
+bool cpplint.\+\_\+\+Block\+Info.\+check\+\_\+namespace\+\_\+indentation = False}
+
+
+
+Definition at line \mbox{\hyperlink{cpplint_8py_source_l02213}{2213}} of file \mbox{\hyperlink{cpplint_8py_source}{cpplint.\+py}}.
+
+\Hypertarget{classcpplint_1_1__BlockInfo_aad762ef7088f2f556a75c9a80006f4db}\index{cpplint.\_BlockInfo@{cpplint.\_BlockInfo}!inline\_asm@{inline\_asm}}
+\index{inline\_asm@{inline\_asm}!cpplint.\_BlockInfo@{cpplint.\_BlockInfo}}
+\doxysubsubsection{\texorpdfstring{inline\_asm}{inline\_asm}}
+{\footnotesize\ttfamily \label{classcpplint_1_1__BlockInfo_aad762ef7088f2f556a75c9a80006f4db} 
+cpplint.\+\_\+\+Block\+Info.\+inline\+\_\+asm = \+\_\+\+NO\+\_\+\+ASM}
+
+
+
+Definition at line \mbox{\hyperlink{cpplint_8py_source_l02212}{2212}} of file \mbox{\hyperlink{cpplint_8py_source}{cpplint.\+py}}.
+
+\Hypertarget{classcpplint_1_1__BlockInfo_abfb5445818ddb493add259f274261c52}\index{cpplint.\_BlockInfo@{cpplint.\_BlockInfo}!open\_parentheses@{open\_parentheses}}
+\index{open\_parentheses@{open\_parentheses}!cpplint.\_BlockInfo@{cpplint.\_BlockInfo}}
+\doxysubsubsection{\texorpdfstring{open\_parentheses}{open\_parentheses}}
+{\footnotesize\ttfamily \label{classcpplint_1_1__BlockInfo_abfb5445818ddb493add259f274261c52} 
+int cpplint.\+\_\+\+Block\+Info.\+open\+\_\+parentheses = 0}
+
+
+
+Definition at line \mbox{\hyperlink{cpplint_8py_source_l02211}{2211}} of file \mbox{\hyperlink{cpplint_8py_source}{cpplint.\+py}}.
+
+\Hypertarget{classcpplint_1_1__BlockInfo_aa974539217437751383ad20896c974d7}\index{cpplint.\_BlockInfo@{cpplint.\_BlockInfo}!seen\_open\_brace@{seen\_open\_brace}}
+\index{seen\_open\_brace@{seen\_open\_brace}!cpplint.\_BlockInfo@{cpplint.\_BlockInfo}}
+\doxysubsubsection{\texorpdfstring{seen\_open\_brace}{seen\_open\_brace}}
+{\footnotesize\ttfamily \label{classcpplint_1_1__BlockInfo_aa974539217437751383ad20896c974d7} 
+cpplint.\+\_\+\+Block\+Info.\+seen\+\_\+open\+\_\+brace = seen\+\_\+open\+\_\+brace}
+
+
+
+Definition at line \mbox{\hyperlink{cpplint_8py_source_l02210}{2210}} of file \mbox{\hyperlink{cpplint_8py_source}{cpplint.\+py}}.
+
+\Hypertarget{classcpplint_1_1__BlockInfo_a81d316f03e42aebbfe0636f905c4c291}\index{cpplint.\_BlockInfo@{cpplint.\_BlockInfo}!starting\_linenum@{starting\_linenum}}
+\index{starting\_linenum@{starting\_linenum}!cpplint.\_BlockInfo@{cpplint.\_BlockInfo}}
+\doxysubsubsection{\texorpdfstring{starting\_linenum}{starting\_linenum}}
+{\footnotesize\ttfamily \label{classcpplint_1_1__BlockInfo_a81d316f03e42aebbfe0636f905c4c291} 
+cpplint.\+\_\+\+Block\+Info.\+starting\+\_\+linenum = linenum}
+
+
+
+Definition at line \mbox{\hyperlink{cpplint_8py_source_l02209}{2209}} of file \mbox{\hyperlink{cpplint_8py_source}{cpplint.\+py}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpplint.\+py\end{DoxyCompactItemize}

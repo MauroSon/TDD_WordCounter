@@ -1,3 +1,5 @@
+// Copyright @2024 Mauro Silva
+
 /**
     * @file conta_palavras.hpp
     * @brief Este arquivo define o header do projeto, serve para declarar interfaces de funções, classes, estruturas, constantes, macros e outras
@@ -69,5 +71,11 @@ class CustomDictionary {
  private:
         std::vector<std::pair<std::string, int>> dictionary;
 };
+
+/**
+ * @brief Avalia o nome do arquivo, lê as palavras escritas e as conta e ordena alfabeticamente.
+ * @param nomeDoArquivo representada por uma string.
+ * @return Retorna o dicionário customizado com as palavras contadas e ordenadas alfabeticamente.
+ */
 
 CustomDictionary contaPalavras(std::string fileName);

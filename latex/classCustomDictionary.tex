@@ -1,0 +1,126 @@
+\doxysection{Custom\+Dictionary Class Reference}
+\hypertarget{classCustomDictionary}{}\label{classCustomDictionary}\index{CustomDictionary@{CustomDictionary}}
+
+
+Representa um dicionário customizado que organiza seus elementos na ordem que são inseridos.  
+
+
+
+
+{\ttfamily \#include $<$conta\+\_\+palavras.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}} (const std\+::string \&key, int value)
+\begin{DoxyCompactList}\small\item\em Insere um novo par de chave e valor no dicionário caso não exista, se existir atualiza o valor da chave. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCustomDictionary_a3fb79fa389484304f04cd2a69fa7149d}{print}} () const
+\begin{DoxyCompactList}\small\item\em Imprime os elementos do dicionário customizado na ordem que eles foram inseridos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCustomDictionary_a1b8ebc2d2094dd613e50c5e646d6e06a}{operator==}} (const \mbox{\hyperlink{classCustomDictionary}{Custom\+Dictionary}} \&other) const
+\begin{DoxyCompactList}\small\item\em Define o operador de igualdade para comparação entre objetos do tipo dicionário customizado por meio de sobrecarga de operador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa um dicionário customizado que organiza seus elementos na ordem que são inseridos. 
+
+Definition at line \mbox{\hyperlink{conta__palavras_8hpp_source_l00026}{26}} of file \mbox{\hyperlink{conta__palavras_8hpp_source}{conta\+\_\+palavras.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}\index{CustomDictionary@{CustomDictionary}!insert@{insert}}
+\index{insert@{insert}!CustomDictionary@{CustomDictionary}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \label{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68} 
+void Custom\+Dictionary\+::insert (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key}{, }\item[{int}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Insere um novo par de chave e valor no dicionário caso não exista, se existir atualiza o valor da chave. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Representa a chave do elemento, assinalado como uma string. \\
+\hline
+{\em value} & Representa o valor do elemento, assinalado como um int. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{conta__palavras_8hpp_source_l00033}{33}} of file \mbox{\hyperlink{conta__palavras_8hpp_source}{conta\+\_\+palavras.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ pair\ :\ dictionary)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pair.first\ ==\ key)\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pair.second\ =\ value;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ dictionary.push\_back(\{key,\ value\});}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classCustomDictionary_a1b8ebc2d2094dd613e50c5e646d6e06a}\index{CustomDictionary@{CustomDictionary}!operator==@{operator==}}
+\index{operator==@{operator==}!CustomDictionary@{CustomDictionary}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{classCustomDictionary_a1b8ebc2d2094dd613e50c5e646d6e06a} 
+bool Custom\+Dictionary\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCustomDictionary}{Custom\+Dictionary}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define o operador de igualdade para comparação entre objetos do tipo dicionário customizado por meio de sobrecarga de operador. 
+
+\begin{DoxyReturn}{Returns}
+Boolean(\+True ou False), se os objetos forem iguais ou diferentes respectivamente. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{conta__palavras_8hpp_source_l00057}{57}} of file \mbox{\hyperlink{conta__palavras_8hpp_source}{conta\+\_\+palavras.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dictionary.size()\ !=\ other.dictionary.size())\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ dictionary.size();\ ++i)\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dictionary[i]\ !=\ other.dictionary[i])\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classCustomDictionary_a3fb79fa389484304f04cd2a69fa7149d}\index{CustomDictionary@{CustomDictionary}!print@{print}}
+\index{print@{print}!CustomDictionary@{CustomDictionary}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \label{classCustomDictionary_a3fb79fa389484304f04cd2a69fa7149d} 
+void Custom\+Dictionary\+::print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Imprime os elementos do dicionário customizado na ordem que eles foram inseridos. 
+
+
+
+Definition at line \mbox{\hyperlink{conta__palavras_8hpp_source_l00046}{46}} of file \mbox{\hyperlink{conta__palavras_8hpp_source}{conta\+\_\+palavras.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ pair\ :\ dictionary)\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ pair.first\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ pair.second\ <<\ std::endl;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{conta__palavras_8hpp}{conta\+\_\+palavras.\+hpp}}\end{DoxyCompactItemize}

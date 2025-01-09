@@ -1,0 +1,107 @@
+\doxysection{conta\+\_\+palavras.\+hpp File Reference}
+\hypertarget{conta__palavras_8hpp}{}\label{conta__palavras_8hpp}\index{conta\_palavras.hpp@{conta\_palavras.hpp}}
+
+
+Este arquivo define o header do projeto, serve para declarar interfaces de funções, classes, estruturas, constantes, macros e outras entidades que devem estar disponíveis para outros arquivos.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classCustomDictionary}{Custom\+Dictionary}}
+\begin{DoxyCompactList}\small\item\em Representa um dicionário customizado que organiza seus elementos na ordem que são inseridos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCustomDictionary}{Custom\+Dictionary}} \mbox{\hyperlink{conta__palavras_8hpp_a178907f7c480b5c800065eb0438028a3}{conta\+Palavras}} (std\+::string file\+Name)
+\begin{DoxyCompactList}\small\item\em Avalia o nome do arquivo, lê as palavras escritas e as conta e ordena alfabeticamente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este arquivo define o header do projeto, serve para declarar interfaces de funções, classes, estruturas, constantes, macros e outras entidades que devem estar disponíveis para outros arquivos. 
+
+O objetivo principal é separar a declaração e a implementação do código afim de organizar o código, tornar o processo de compilação mais eficiente e permitir reuso de código.\+abs
+
+\begin{DoxyAuthor}{Author}
+Mauro Silva 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/01-\/09 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{conta__palavras_8hpp_source}{conta\+\_\+palavras.\+hpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{conta__palavras_8hpp_a178907f7c480b5c800065eb0438028a3}\index{conta\_palavras.hpp@{conta\_palavras.hpp}!contaPalavras@{contaPalavras}}
+\index{contaPalavras@{contaPalavras}!conta\_palavras.hpp@{conta\_palavras.hpp}}
+\doxysubsubsection{\texorpdfstring{contaPalavras()}{contaPalavras()}}
+{\footnotesize\ttfamily \label{conta__palavras_8hpp_a178907f7c480b5c800065eb0438028a3} 
+\mbox{\hyperlink{classCustomDictionary}{Custom\+Dictionary}} conta\+Palavras (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Avalia o nome do arquivo, lê as palavras escritas e as conta e ordena alfabeticamente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+Do\+Arquivo} & representada por uma string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o dicionário customizado com as palavras contadas e ordenadas alfabeticamente. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{conta__palavras_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{conta__palavras_8cpp_source}{conta\+\_\+palavras.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00006\ \ \ \ \ std::vector<std::string>\ words;}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{int}\ qnt\ =\ 0;}
+\DoxyCodeLine{00008\ \ \ \ \ std::string\ temp;}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{classCustomDictionary}{CustomDictionary}}\ result;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ std::ifstream\ input(fileName);}
+\DoxyCodeLine{00012\ \ \ \ \ std::string\ text;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{while}\ (input\ >>\ text)\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ words.push\_back(text);}
+\DoxyCodeLine{00016\ \ \ \ \ \}}
+\DoxyCodeLine{00017\ \ \ \ \ input.close();}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ it\ =\ words.begin();\ it\ \ !=\ words.end();\ ++it)\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ ++qnt;}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ qnt;\ ++i)\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ i+1;\ j\ <\ qnt;\ ++j)\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (words[i]\ >\ words[j])\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp\ =\ words[i];}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ words[i]\ =\ words[j];}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ words[j]\ =\ temp;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ it\ =\ words.begin();\ it\ !=\ words.end();\ ++it)\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ flag\ =\ 0;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ cont\ =\ words.begin();\ cont\ !=\ words.end();\ ++cont)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (*it\ ==\ *cont)\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++flag;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(*it,\ flag);}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}

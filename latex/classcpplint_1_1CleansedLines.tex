@@ -1,0 +1,249 @@
+\doxysection{cpplint.\+Cleansed\+Lines Class Reference}
+\hypertarget{classcpplint_1_1CleansedLines}{}\label{classcpplint_1_1CleansedLines}\index{cpplint.CleansedLines@{cpplint.CleansedLines}}
+Inheritance diagram for cpplint.\+Cleansed\+Lines\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcpplint_1_1CleansedLines}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcpplint_1_1CleansedLines_abcd3544d4c0343bfafaae30ab87d5a4c}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, lines)
+\item 
+\mbox{\hyperlink{classcpplint_1_1CleansedLines_adfe2b45fdf2e0088c726437f67bb3328}{Num\+Lines}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classcpplint_1_1CleansedLines_ade71f432c9a4864e8f1023c7b34148c3}{elided}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{classcpplint_1_1CleansedLines_a151adb78b62bf7dc51f87f9a2809c394}{lines}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{classcpplint_1_1CleansedLines_a7fe7158ec4c07e7627a9f9b80ebcf5b6}{raw\+\_\+lines}} = lines
+\item 
+\mbox{\hyperlink{classcpplint_1_1CleansedLines_a4b42ab48659954fb6e0a4e4eb483a45a}{num\+\_\+lines}} = len(lines)
+\item 
+\mbox{\hyperlink{classcpplint_1_1CleansedLines_a0cc228ba3c00ba590b27a759cf8023ce}{lines\+\_\+without\+\_\+raw\+\_\+strings}} = \mbox{\hyperlink{namespacecpplint_a4fae6fc97d3683e4f74115c09e1f223d}{Cleanse\+Raw\+Strings}}(lines)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcpplint_1_1CleansedLines_a4b8c6a68641def9a2d39c44f2f4d0bb1}{\+\_\+\+Collapse\+Strings}} (elided)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Holds 4 copies of all lines with different preprocessing applied to them.
+
+1) elided member contains lines without strings and comments.
+2) lines member contains lines without comments.
+3) raw_lines member contains all the lines without processing.
+4) lines_without_raw_strings member is same as raw_lines, but with C++11 raw
+   strings removed.
+All these members are of <type 'list'>, and of the same length.
+\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{cpplint_8py_source_l01424}{1424}} of file \mbox{\hyperlink{cpplint_8py_source}{cpplint.\+py}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcpplint_1_1CleansedLines_abcd3544d4c0343bfafaae30ab87d5a4c}\index{cpplint.CleansedLines@{cpplint.CleansedLines}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!cpplint.CleansedLines@{cpplint.CleansedLines}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classcpplint_1_1CleansedLines_abcd3544d4c0343bfafaae30ab87d5a4c} 
+cpplint.\+Cleansed\+Lines.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{lines}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{cpplint_8py_source_l01435}{1435}} of file \mbox{\hyperlink{cpplint_8py_source}{cpplint.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01435\ \ \ \textcolor{keyword}{def\ }\_\_init\_\_(self,\ lines):}
+\DoxyCodeLine{01436\ \ \ \ \ self.elided\ =\ []}
+\DoxyCodeLine{01437\ \ \ \ \ self.lines\ =\ []}
+\DoxyCodeLine{01438\ \ \ \ \ self.raw\_lines\ =\ lines}
+\DoxyCodeLine{01439\ \ \ \ \ self.num\_lines\ =\ len(lines)}
+\DoxyCodeLine{01440\ \ \ \ \ self.lines\_without\_raw\_strings\ =\ CleanseRawStrings(lines)}
+\DoxyCodeLine{01441\ \ \ \ \ \textcolor{keywordflow}{for}\ linenum\ \textcolor{keywordflow}{in}\ range(len(self.lines\_without\_raw\_strings)):}
+\DoxyCodeLine{01442\ \ \ \ \ \ \ self.lines.append(CleanseComments(}
+\DoxyCodeLine{01443\ \ \ \ \ \ \ \ \ \ \ self.lines\_without\_raw\_strings[linenum]))}
+\DoxyCodeLine{01444\ \ \ \ \ \ \ elided\ =\ self.\_CollapseStrings(self.lines\_without\_raw\_strings[linenum])}
+\DoxyCodeLine{01445\ \ \ \ \ \ \ self.elided.append(CleanseComments(elided))}
+\DoxyCodeLine{01446\ }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcpplint_1_1CleansedLines_a4b8c6a68641def9a2d39c44f2f4d0bb1}\index{cpplint.CleansedLines@{cpplint.CleansedLines}!\_CollapseStrings@{\_CollapseStrings}}
+\index{\_CollapseStrings@{\_CollapseStrings}!cpplint.CleansedLines@{cpplint.CleansedLines}}
+\doxysubsubsection{\texorpdfstring{\_CollapseStrings()}{\_CollapseStrings()}}
+{\footnotesize\ttfamily \label{classcpplint_1_1CleansedLines_a4b8c6a68641def9a2d39c44f2f4d0bb1} 
+cpplint.\+Cleansed\+Lines.\+\_\+\+Collapse\+Strings (\begin{DoxyParamCaption}\item[{}]{elided}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\begin{DoxyVerb}Collapses strings and chars on a line to simple "" or '' blocks.
+
+We nix strings first so we're not fooled by text like '"http://"'
+
+Args:
+  elided: The line being processed.
+
+Returns:
+  The line with collapsed strings.
+\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{cpplint_8py_source_l01452}{1452}} of file \mbox{\hyperlink{cpplint_8py_source}{cpplint.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01452\ \ \ \textcolor{keyword}{def\ }\_CollapseStrings(elided):}
+\DoxyCodeLine{01453\ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}Collapses\ strings\ and\ chars\ on\ a\ line\ to\ simple\ "{}"{}\ or\ ''\ blocks.}}
+\DoxyCodeLine{01454\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{01455\ \textcolor{stringliteral}{\ \ \ \ We\ nix\ strings\ first\ so\ we're\ not\ fooled\ by\ text\ like\ '"{}http://"{}'}}
+\DoxyCodeLine{01456\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{01457\ \textcolor{stringliteral}{\ \ \ \ Args:}}
+\DoxyCodeLine{01458\ \textcolor{stringliteral}{\ \ \ \ \ \ elided:\ The\ line\ being\ processed.}}
+\DoxyCodeLine{01459\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{01460\ \textcolor{stringliteral}{\ \ \ \ Returns:}}
+\DoxyCodeLine{01461\ \textcolor{stringliteral}{\ \ \ \ \ \ The\ line\ with\ collapsed\ strings.}}
+\DoxyCodeLine{01462\ \textcolor{stringliteral}{\ \ \ \ "{}"{}"{}}}
+\DoxyCodeLine{01463\ \ \ \ \ \textcolor{keywordflow}{if}\ \_RE\_PATTERN\_INCLUDE.match(elided):}
+\DoxyCodeLine{01464\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ elided}
+\DoxyCodeLine{01465\ }
+\DoxyCodeLine{01466\ \ \ \ \ \textcolor{comment}{\#\ Remove\ escaped\ characters\ first\ to\ make\ quote/single\ quote\ collapsing}}
+\DoxyCodeLine{01467\ \ \ \ \ \textcolor{comment}{\#\ basic.\ \ Things\ that\ look\ like\ escaped\ characters\ shouldn't\ occur}}
+\DoxyCodeLine{01468\ \ \ \ \ \textcolor{comment}{\#\ outside\ of\ strings\ and\ chars.}}
+\DoxyCodeLine{01469\ \ \ \ \ elided\ =\ \_RE\_PATTERN\_CLEANSE\_LINE\_ESCAPES.sub(\textcolor{stringliteral}{''},\ elided)}
+\DoxyCodeLine{01470\ }
+\DoxyCodeLine{01471\ \ \ \ \ \textcolor{comment}{\#\ Replace\ quoted\ strings\ and\ digit\ separators.\ \ Both\ single\ quotes}}
+\DoxyCodeLine{01472\ \ \ \ \ \textcolor{comment}{\#\ and\ double\ quotes\ are\ processed\ in\ the\ same\ loop,\ otherwise}}
+\DoxyCodeLine{01473\ \ \ \ \ \textcolor{comment}{\#\ nested\ quotes\ wouldn't\ work.}}
+\DoxyCodeLine{01474\ \ \ \ \ collapsed\ =\ \textcolor{stringliteral}{''}}
+\DoxyCodeLine{01475\ \ \ \ \ \textcolor{keywordflow}{while}\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{01476\ \ \ \ \ \ \ \textcolor{comment}{\#\ Find\ the\ first\ quote\ character}}
+\DoxyCodeLine{01477\ \ \ \ \ \ \ match\ =\ Match(\textcolor{stringliteral}{r'\string^([\string^\(\backslash\)'"{}]*)([\(\backslash\)'"{}])(.*)\$'},\ elided)}
+\DoxyCodeLine{01478\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keywordflow}{not}\ match:}
+\DoxyCodeLine{01479\ \ \ \ \ \ \ \ \ collapsed\ +=\ elided}
+\DoxyCodeLine{01480\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break}}
+\DoxyCodeLine{01481\ \ \ \ \ \ \ head,\ quote,\ tail\ =\ match.groups()}
+\DoxyCodeLine{01482\ }
+\DoxyCodeLine{01483\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ quote\ ==\ \textcolor{stringliteral}{'"{}'}:}
+\DoxyCodeLine{01484\ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Collapse\ double\ quoted\ strings}}
+\DoxyCodeLine{01485\ \ \ \ \ \ \ \ \ second\_quote\ =\ tail.find(\textcolor{stringliteral}{'"{}'})}
+\DoxyCodeLine{01486\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ second\_quote\ >=\ 0:}
+\DoxyCodeLine{01487\ \ \ \ \ \ \ \ \ \ \ collapsed\ +=\ head\ +\ \textcolor{stringliteral}{'"{}"{}'}}
+\DoxyCodeLine{01488\ \ \ \ \ \ \ \ \ \ \ elided\ =\ tail[second\_quote\ +\ 1:]}
+\DoxyCodeLine{01489\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{01490\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Unmatched\ double\ quote,\ don't\ bother\ processing\ the\ rest}}
+\DoxyCodeLine{01491\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ of\ the\ line\ since\ this\ is\ probably\ a\ multiline\ string.}}
+\DoxyCodeLine{01492\ \ \ \ \ \ \ \ \ \ \ collapsed\ +=\ elided}
+\DoxyCodeLine{01493\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break}}
+\DoxyCodeLine{01494\ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{01495\ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Found\ single\ quote,\ check\ nearby\ text\ to\ eliminate\ digit\ separators.}}
+\DoxyCodeLine{01496\ \ \ \ \ \ \ \ \ \textcolor{comment}{\#}}
+\DoxyCodeLine{01497\ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ There\ is\ no\ special\ handling\ for\ floating\ point\ here,\ because}}
+\DoxyCodeLine{01498\ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ the\ integer/fractional/exponent\ parts\ would\ all\ be\ parsed}}
+\DoxyCodeLine{01499\ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ correctly\ as\ long\ as\ there\ are\ digits\ on\ both\ sides\ of\ the}}
+\DoxyCodeLine{01500\ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ separator.\ \ So\ we\ are\ fine\ as\ long\ as\ we\ don't\ see\ something}}
+\DoxyCodeLine{01501\ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ like\ "{}0.'3"{}\ (gcc\ 4.9.0\ will\ not\ allow\ this\ literal).}}
+\DoxyCodeLine{01502\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ Search(\textcolor{stringliteral}{r'\(\backslash\)b(?:0[bBxX]?|[1-\/9])[0-\/9a-\/fA-\/F]*\$'},\ head):}
+\DoxyCodeLine{01503\ \ \ \ \ \ \ \ \ \ \ match\_literal\ =\ Match(\textcolor{stringliteral}{r'\string^((?:\(\backslash\)'?[0-\/9a-\/zA-\/Z\_])*)(.*)\$'},\ \textcolor{stringliteral}{"{}'"{}}\ +\ tail)}
+\DoxyCodeLine{01504\ \ \ \ \ \ \ \ \ \ \ collapsed\ +=\ head\ +\ match\_literal.group(1).replace(\textcolor{stringliteral}{"{}'"{}},\ \textcolor{stringliteral}{''})}
+\DoxyCodeLine{01505\ \ \ \ \ \ \ \ \ \ \ elided\ =\ match\_literal.group(2)}
+\DoxyCodeLine{01506\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{01507\ \ \ \ \ \ \ \ \ \ \ second\_quote\ =\ tail.find(\textcolor{stringliteral}{'\(\backslash\)''})}
+\DoxyCodeLine{01508\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ second\_quote\ >=\ 0:}
+\DoxyCodeLine{01509\ \ \ \ \ \ \ \ \ \ \ \ \ collapsed\ +=\ head\ +\ \textcolor{stringliteral}{"{}''"{}}}
+\DoxyCodeLine{01510\ \ \ \ \ \ \ \ \ \ \ \ \ elided\ =\ tail[second\_quote\ +\ 1:]}
+\DoxyCodeLine{01511\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{01512\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Unmatched\ single\ quote}}
+\DoxyCodeLine{01513\ \ \ \ \ \ \ \ \ \ \ \ \ collapsed\ +=\ elided}
+\DoxyCodeLine{01514\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break}}
+\DoxyCodeLine{01515\ }
+\DoxyCodeLine{01516\ \ \ \ \ \textcolor{keywordflow}{return}\ collapsed}
+\DoxyCodeLine{01517\ }
+\DoxyCodeLine{01518\ }
+
+\end{DoxyCode}
+\Hypertarget{classcpplint_1_1CleansedLines_adfe2b45fdf2e0088c726437f67bb3328}\index{cpplint.CleansedLines@{cpplint.CleansedLines}!NumLines@{NumLines}}
+\index{NumLines@{NumLines}!cpplint.CleansedLines@{cpplint.CleansedLines}}
+\doxysubsubsection{\texorpdfstring{NumLines()}{NumLines()}}
+{\footnotesize\ttfamily \label{classcpplint_1_1CleansedLines_adfe2b45fdf2e0088c726437f67bb3328} 
+cpplint.\+Cleansed\+Lines.\+Num\+Lines (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the number of lines represented.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{cpplint_8py_source_l01447}{1447}} of file \mbox{\hyperlink{cpplint_8py_source}{cpplint.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01447\ \ \ \textcolor{keyword}{def\ }NumLines(self):}
+\DoxyCodeLine{01448\ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}Returns\ the\ number\ of\ lines\ represented."{}"{}"{}}}
+\DoxyCodeLine{01449\ \ \ \ \ \textcolor{keywordflow}{return}\ self.num\_lines}
+\DoxyCodeLine{01450\ }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcpplint_1_1CleansedLines_ade71f432c9a4864e8f1023c7b34148c3}\index{cpplint.CleansedLines@{cpplint.CleansedLines}!elided@{elided}}
+\index{elided@{elided}!cpplint.CleansedLines@{cpplint.CleansedLines}}
+\doxysubsubsection{\texorpdfstring{elided}{elided}}
+{\footnotesize\ttfamily \label{classcpplint_1_1CleansedLines_ade71f432c9a4864e8f1023c7b34148c3} 
+list cpplint.\+Cleansed\+Lines.\+elided = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{cpplint_8py_source_l01436}{1436}} of file \mbox{\hyperlink{cpplint_8py_source}{cpplint.\+py}}.
+
+\Hypertarget{classcpplint_1_1CleansedLines_a151adb78b62bf7dc51f87f9a2809c394}\index{cpplint.CleansedLines@{cpplint.CleansedLines}!lines@{lines}}
+\index{lines@{lines}!cpplint.CleansedLines@{cpplint.CleansedLines}}
+\doxysubsubsection{\texorpdfstring{lines}{lines}}
+{\footnotesize\ttfamily \label{classcpplint_1_1CleansedLines_a151adb78b62bf7dc51f87f9a2809c394} 
+list cpplint.\+Cleansed\+Lines.\+lines = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{cpplint_8py_source_l01437}{1437}} of file \mbox{\hyperlink{cpplint_8py_source}{cpplint.\+py}}.
+
+\Hypertarget{classcpplint_1_1CleansedLines_a0cc228ba3c00ba590b27a759cf8023ce}\index{cpplint.CleansedLines@{cpplint.CleansedLines}!lines\_without\_raw\_strings@{lines\_without\_raw\_strings}}
+\index{lines\_without\_raw\_strings@{lines\_without\_raw\_strings}!cpplint.CleansedLines@{cpplint.CleansedLines}}
+\doxysubsubsection{\texorpdfstring{lines\_without\_raw\_strings}{lines\_without\_raw\_strings}}
+{\footnotesize\ttfamily \label{classcpplint_1_1CleansedLines_a0cc228ba3c00ba590b27a759cf8023ce} 
+cpplint.\+Cleansed\+Lines.\+lines\+\_\+without\+\_\+raw\+\_\+strings = \mbox{\hyperlink{namespacecpplint_a4fae6fc97d3683e4f74115c09e1f223d}{Cleanse\+Raw\+Strings}}(lines)}
+
+
+
+Definition at line \mbox{\hyperlink{cpplint_8py_source_l01440}{1440}} of file \mbox{\hyperlink{cpplint_8py_source}{cpplint.\+py}}.
+
+\Hypertarget{classcpplint_1_1CleansedLines_a4b42ab48659954fb6e0a4e4eb483a45a}\index{cpplint.CleansedLines@{cpplint.CleansedLines}!num\_lines@{num\_lines}}
+\index{num\_lines@{num\_lines}!cpplint.CleansedLines@{cpplint.CleansedLines}}
+\doxysubsubsection{\texorpdfstring{num\_lines}{num\_lines}}
+{\footnotesize\ttfamily \label{classcpplint_1_1CleansedLines_a4b42ab48659954fb6e0a4e4eb483a45a} 
+cpplint.\+Cleansed\+Lines.\+num\+\_\+lines = len(lines)}
+
+
+
+Definition at line \mbox{\hyperlink{cpplint_8py_source_l01439}{1439}} of file \mbox{\hyperlink{cpplint_8py_source}{cpplint.\+py}}.
+
+\Hypertarget{classcpplint_1_1CleansedLines_a7fe7158ec4c07e7627a9f9b80ebcf5b6}\index{cpplint.CleansedLines@{cpplint.CleansedLines}!raw\_lines@{raw\_lines}}
+\index{raw\_lines@{raw\_lines}!cpplint.CleansedLines@{cpplint.CleansedLines}}
+\doxysubsubsection{\texorpdfstring{raw\_lines}{raw\_lines}}
+{\footnotesize\ttfamily \label{classcpplint_1_1CleansedLines_a7fe7158ec4c07e7627a9f9b80ebcf5b6} 
+list cpplint.\+Cleansed\+Lines.\+raw\+\_\+lines = lines}
+
+
+
+Definition at line \mbox{\hyperlink{cpplint_8py_source_l01438}{1438}} of file \mbox{\hyperlink{cpplint_8py_source}{cpplint.\+py}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpplint.\+py\end{DoxyCompactItemize}

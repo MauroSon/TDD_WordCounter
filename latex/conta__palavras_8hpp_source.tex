@@ -1,0 +1,54 @@
+\doxysection{conta\+\_\+palavras.\+hpp}
+\hypertarget{conta__palavras_8hpp_source}{}\label{conta__palavras_8hpp_source}\mbox{\hyperlink{conta__palavras_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00001}00001\ \textcolor{comment}{//\ Copyright\ @2024\ Mauro\ Silva}}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00019}00019\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00026}\mbox{\hyperlink{classCustomDictionary}{00026}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCustomDictionary}{CustomDictionary}}\ \{}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00027}00027\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00033}\mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{00033}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCustomDictionary_a46b3565fb3f8b26b0c9bf6cc81c93e68}{insert}}(\textcolor{keyword}{const}\ std::string\&\ key,\ \textcolor{keywordtype}{int}\ value)\ \{}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ pair\ :\ dictionary)\ \{}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pair.first\ ==\ key)\ \{}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pair.second\ =\ value;}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ dictionary.push\_back(\{key,\ value\});}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00046}\mbox{\hyperlink{classCustomDictionary_a3fb79fa389484304f04cd2a69fa7149d}{00046}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCustomDictionary_a3fb79fa389484304f04cd2a69fa7149d}{print}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ pair\ :\ dictionary)\ \{}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ pair.first\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ pair.second\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00057}\mbox{\hyperlink{classCustomDictionary_a1b8ebc2d2094dd613e50c5e646d6e06a}{00057}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCustomDictionary_a1b8ebc2d2094dd613e50c5e646d6e06a}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCustomDictionary}{CustomDictionary}}\&\ other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dictionary.size()\ !=\ other.dictionary.size())\ \{}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ dictionary.size();\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dictionary[i]\ !=\ other.dictionary[i])\ \{}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00071}00071\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00072}00072\ \ \ \ \ \ \ \ \ std::vector<std::pair<std::string,\ int>>\ dictionary;}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00073}00073\ \};}
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{conta__palavras_8hpp_source_l00081}00081\ \mbox{\hyperlink{classCustomDictionary}{CustomDictionary}}\ \mbox{\hyperlink{conta__palavras_8hpp_a178907f7c480b5c800065eb0438028a3}{contaPalavras}}(std::string\ fileName);}
+
+\end{DoxyCode}
