@@ -203,3 +203,16 @@ TEST_CASE("Teste Numeros", "[single-file]") {
 
     REQUIRE(contaPalavras(fileName) == expectedAnswer);
 }
+
+TEST_CASE("Teste Quantidade(n+)", "[single-file]") {
+    CustomDictionary expectedAnswer;
+    std::string fileName = {"inputFile9.txt"};
+
+    expectedAnswer.insert("abacate", 3);
+    expectedAnswer.insert("banana", 5);
+    expectedAnswer.insert("maçã", 4);
+    expectedAnswer.insert("melão", 3);
+    expectedAnswer.insert("morango", 6);
+
+    REQUIRE(contaPalavras(fileName) == expectedAnswer);
+}
