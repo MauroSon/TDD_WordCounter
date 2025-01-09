@@ -16,23 +16,23 @@ CustomDictionary contaPalavras(std::string fileName) {
     }
     input.close();
     for (auto it = words.begin(); it  != words.end(); ++it) {
-       //std::cout << *it << std::endl;
+       // std::cout << *it << std::endl;
        ++qnt;
     }
 
-    for (int i = 0; i < qnt; ++i){
-        for (int j = i+1; j<qnt;++j){
-            if (words[i] > words[j]){
+    for (int i = 0; i < qnt; ++i) {
+        for (int j = i+1; j < qnt; ++j) {
+            if (words[i] > words[j]) {
                 temp = words[i];
                 words[i] = words[j];
                 words[j] = temp;
-            };
-        };
-    };
+            }
+        }
+    }
 
-    for ( auto it = words.begin(); it != words.end(); ++it){
-        result.insert(*it,result.count(*it)+1);
-    };
+    for (auto it = words.begin(); it != words.end(); ++it) {
+        result.insert(*it, result.count(*it)+1);
+    }
 
     return result;
 }
